@@ -5,6 +5,7 @@
 
 import React from 'react'
 import Seo from '@components/Seo'
+import { useTranslation } from 'react-i18next'
 
 /**
  * @function Home
@@ -12,10 +13,14 @@ import Seo from '@components/Seo'
  * @return {Object} Return the dom of the Home page
  */
 const Home = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <Seo title="Home" description="Description of Home" />
-      Test
+      <div>{t('title')}</div>
+      <div>{t('description.part1')}</div>
+      <div>{t('description.part2')}</div>
     </>
   )
 }
